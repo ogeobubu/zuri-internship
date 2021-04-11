@@ -43,6 +43,10 @@ p {
   font-family: "Roboto", sans-serif;
 }
 
+.blue {
+  color: #6d78c7;
+}
+
 #work .container {
   display: flex;
   justify-content: space-between;
