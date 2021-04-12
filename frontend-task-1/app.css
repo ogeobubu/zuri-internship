@@ -1,19 +1,115 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 15px;
 }
-
+:root {
+  --white: #ffffff;
+  --grey-lighty: #f9f9f9;
+  --grey-light: #e3e3e3;
+  --grey: #e5e5e5;
+  --grey-dark: #b9b9b9;
+  --purple: #c68eaa;
+  --sky: #4fc7ff;
+  --emerald: #04bdbd;
+  --blue: #04aec5;
+  --blue-dark: #0f6cc9;
+  --color-primary: #05e2e2;
+}
 body {
-  background: #cccccc;
+  background: var(--grey-light);
   font-family: "Poppins", sans-serif;
   line-height: 1.4;
+  padding: 1em;
+  color: var(--grey-dark);
 }
-
+h4 {
+  color: var(--sky);
+}
 .wrapper {
-  max-width: 960px;
+  max-width: 38em;
+  padding: 1em 3em 2em 3em;
+  margin: 0em auto;
+  background-color: var(--white);
+  border-radius: 4.2px;
+  box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
+}
+.wrapper input {
+  padding-left: 4.4em;
+}
+.wrapper h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.wrapper form {
+  background: #fffffe;
+  padding: 2.5rem 3rem;
+}
+.wrapper form h4 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.wrapper form .input-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+@media (max-width: 540px) {
+  .wrapper form .input-group {
+    flex-direction: column;
+  }
+}
+.wrapper form .input-group .input-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px #ccc solid;
+  padding: 0.3rem 1rem;
   width: 100%;
-  margin: 0 auto;
+  margin: 0.5rem;
+}
+@media (max-width: 540px) {
+  .wrapper form .input-group .input-box {
+    flex-direction: column;
+  }
+}
+.wrapper form .input-group .input-box button {
+  width: 100%;
+  border: none;
+  appearance: none;
+  outline: none;
+  padding: 1em;
+  cursor: pointer;
+}
+.wrapper form .input-group .input-box select {
+  height: 3.4em;
+  width: 40%;
+}
+.wrapper form .input-group .input-box select:focus,
+.wrapper form .input-group .input-box select:active {
+  outline: 0;
+}
+.wrapper form .input-group .input-box select option {
+  background-color: var(--color-primary);
+  color: var(--white);
+}
+.wrapper form .input-group .input-box input {
+  width: 100%;
+  padding: 1em;
+  background-color: var(--grey-lighty);
+  border: 1px solid var(--grey);
+  border-radius: 3px;
+  transition: 0.35s ease-in-out;
+  margin-right: 1rem;
+}
+.wrapper form .input-group .input-box input:focus {
+  outline: 0;
+  border-color: var(--grey-lighty);
+}
+.wrapper form .input-group .input-box input:after {
+  border-right-color: var(--color-primary);
 }
