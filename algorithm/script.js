@@ -17,7 +17,11 @@ const convertFahrToCelsius = (value) => {
 convertFahrToCelsius(100);
 
 const checkYuGiOh = (n) => {
-  const array = [];
+  if(Object.prototype.toString.call(value).slice(8, -1).toLowerCase() !==
+  "number") {
+    return console.log("invalid parameter:" n)
+  } else {
+    const array = [];
 
   for (let i = 1; i <= n; i++) {
     array.push(i);
@@ -34,7 +38,9 @@ const checkYuGiOh = (n) => {
   array[3] = "yu";
   array[4] = "oh";
   array[5] = "yu-gi";
+  
   console.log(array);
+  }
 };
 
 checkYuGiOh(5);
