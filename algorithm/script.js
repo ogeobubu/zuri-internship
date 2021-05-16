@@ -17,29 +17,30 @@ const convertFahrToCelsius = (value) => {
 convertFahrToCelsius(100);
 
 const checkYuGiOh = (n) => {
-  if(Object.prototype.toString.call(value).slice(8, -1).toLowerCase() !==
-  "number") {
-    return console.log("invalid parameter:" n)
+  if (
+    Object.prototype.toString.call(n).slice(8, -1).toLowerCase() !== "number"
+  ) {
+    return console.log("invalid parameter:", n);
   } else {
     const array = [];
 
-  for (let i = 1; i <= n; i++) {
-    array.push(i);
+    for (let i = 1; i <= n; i++) {
+      array.push(i);
 
-    if (i === 10) {
-      array[10] = "yu-oh";
-    } else if (i == 30) {
-      array[30] = "yu-gi-oh";
+      if (i === 10) {
+        array[10] = "yu-oh";
+      } else if (i == 30) {
+        array[30] = "yu-gi-oh";
+      }
     }
-  }
 
-  array[1] = "yu";
-  array[2] = "gi";
-  array[3] = "yu";
-  array[4] = "oh";
-  array[5] = "yu-gi";
-  
-  console.log(array);
+    array[1] = "yu";
+    array[2] = "gi";
+    array[3] = "yu";
+    array[4] = "oh";
+    array[5] = "yu-gi";
+
+    console.log(array);
   }
 };
 
