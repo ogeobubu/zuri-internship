@@ -14,7 +14,7 @@ const convertFahrToCelsius = (value) => {
   }
 };
 
-convertFahrToCelsius({ temp: 0 });
+convertFahrToCelsius(100);
 
 const checkYuGiOh = (n) => {
   const array = [];
