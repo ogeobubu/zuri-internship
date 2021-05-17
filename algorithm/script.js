@@ -10,7 +10,7 @@ const convertFahrToCelsius = (value) => {
     return console.log(errorMessage);
   } else {
     const calculation = (value - 32) * (5 / 9);
-    return console.log(`${Math.floor(calculation)}°C`);
+    return console.log(`${Math.floor(calculation)}`);
   }
 };
 
@@ -26,22 +26,16 @@ const checkYuGiOh = (n) => {
 
     for (let i = 1; i <= n; i++) {
       array.push(i);
-
-      if (i === 10) {
-        array[10] = "yu-oh";
-      } else if (i == 30) {
-        array[30] = "yu-gi-oh";
+      if (i % 2 === 0) {
+        array.push("yu");
+      } else if (i % 3 === 0) {
+        array.push("gi");
+      } else if (i % 5 === 0) {
+        array.push("oh");
       }
     }
-
-    array[1] = "yu";
-    array[2] = "gi";
-    array[3] = "yu";
-    array[4] = "oh";
-    array[5] = "yu-gi";
-
     console.log(array);
   }
 };
 
-checkYuGiOh(5);
+checkYuGiOh(10);
